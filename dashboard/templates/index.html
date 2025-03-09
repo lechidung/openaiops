@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAIOps Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to OpenAIOps Dashboard</h1>
+    </header>
+    <main>
+        <section id="overview">
+            <h2>System Overview</h2>
+            <p>This section provides an overview of the system's performance and alerts.</p>
+        </section>
+        <section id="logs">
+            <h2>Log Ingestion</h2>
+            <p>View and analyze logs collected from various sources.</p>
+        </section>
+        <section id="alerts">
+            <h2>Alerts</h2>
+            <p>Monitor alerts triggered by the system based on defined rules.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 OpenAIOps. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

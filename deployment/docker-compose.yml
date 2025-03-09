@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  ai_models:
+    build:
+      context: ../ai_models
+      dockerfile: Dockerfile
+    volumes:
+      - ../ai_models:/app
+    networks:
+      - aio_network
+
+  log_ingestion:
+    build:
+      context: ../log_ingestion
+      dockerfile: Dockerfile
+    volumes:
+      - ../log_ingestion:/app
+    networks:
+      - aio_network
+
+  alerting:
+    build:
+      context: ../alerting
+      dockerfile: Dockerfile
+    volumes:
+      - ../alerting:/app
+    networks:
+      - aio_network
+
+  dashboard:
+    build:
+      context: ../dashboard
+      dockerfile: Dockerfile
+    volumes:
+      - ../dashboard:/app
+    ports:
+      - "5000:5000"
+    networks:
+      - aio_network
+
+networks:
+  aio_network:
+    driver: bridge

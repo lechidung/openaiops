@@ -1,0 +1,5 @@
+Fluentd
+opentelemetry-api
+opentelemetry-sdk
+requests
+jsonschema
