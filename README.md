@@ -27,3 +27,20 @@ docker-compose up -d
 ### 3️⃣ Access Grafana Dashboard at http://localhost:3000
 
 👉 Join contribute!
+
+
+## Skeleton
+
+```
+openaiops/
+│── ai_model/           # AI anomaly detection models
+│   ├── model.py        # ML model for anomaly detection
+│   ├── api.py          # FastAPI service to expose AI API
+│   ├── requirements.txt
+│── log_ingestion/      # Log collection with Fluentd/OpenTelemetry
+│── alerting/           # Alerting system (Slack, Webhooks, Prometheus Alertmanager)
+│── dashboard/          # Grafana/Kibana visualization setup
+│── docker-compose.yml  # Deployment setup
+│── README.md           # Documentation
+│── .github/            # GitHub actions (CI/CD automation)
+```
